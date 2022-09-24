@@ -179,7 +179,7 @@ jobs:
 
 
   DeployProd:
-    needs: DeployHom
+    #needs: DeployHom
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
