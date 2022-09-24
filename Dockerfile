@@ -9,6 +9,8 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
+ENV PORT 8080
+ENV HOST 0.0.0.0
 EXPOSE 8080
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD [ "python3", "-m" , "flask","-p", "8080", "run", "--host=0.0.0.0"]
