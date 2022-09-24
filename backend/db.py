@@ -22,10 +22,12 @@ def open_connection():
             conn = pymysql.connect(user=db_user, password=db_password,
                                 host=db_local_host, db=db_name,cursorclass=pymysql.cursors.DictCursor)
 
+        return conn
+
     except pymysql.MySQLError as e:
         print(e)
 
-    return conn
+    
 
 def get_songs():
     conn = open_connection()
